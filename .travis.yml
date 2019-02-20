@@ -9,7 +9,7 @@ script:
   - docker run satya27aug/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t /multi-client ./client
+  - docker build -t satya27aug/multi-client ./client
   - docker build -t satya27aug/multi-nginx ./nginx
   - docker build -t satya27aug/multi-server ./server
   - docker build -t satya27aug/multi-worker ./worker
